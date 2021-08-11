@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,900;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>IMC</title>
 </head>
 <body>
@@ -11,20 +15,20 @@
         <h1>CALCULE SEU IMC</h1>
     </header>
     <main>
-        <section class="catehorias">
+        <section class="categorias">
             <table>
                 <thead>
                     <tr>
-                        <th>CATEGORIA</th>
+                        <th colspan="2">CATEGORIA</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr class="campo">
                         <td>IMC abaixo de 18,5</td>
                         <td>Abaixo do peso</td>
                     </tr>
-                    <tr>
-                        <td>IMC 18,5 - 24,9</td>
+                    <tr class="campo">
+                        <td class="campo">IMC 18,5 - 24,9</td>
                         <td>Peso ideal</td>
                     </tr>
                     <tr>
@@ -48,23 +52,24 @@
         </section>
         <section class="calculadora">
             <form action="">
-                <div>
+                <div class="campo">
                     <label>Nome: </label>
-                    <input type="text">
+                    <input id="nome" type="text">
                 </div>
-                <div>
+                <div class="campo unidade" data-unidade="metros">
                     <label>Altura: </label>
-                    <input type="text">
+                    <input id="metros" type="text">
                 </div>
-                <div>
+                <div class="campo unidade" data-unidade="quilos">
                     <label>Peso: </label>
-                    <input type="text">
+                    <input class="quilos" type="text">
                 </div>
+                <button type="button">CALCULAR</button>
+                <div class="resultado" id="resultado">Texto para teste</div>
             </form>
-            <button type="button">CALCULAR</button>
-            <div id="resultado"></div>
         </section>
     </main>
+
     <footer>
         <span>Copyright &copy; 2021 | Ana Oliveira </span>
     </footer>
